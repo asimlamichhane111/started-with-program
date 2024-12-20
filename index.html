@@ -1,0 +1,15 @@
+{%extends "layout.html"%}
+{%block head%}
+working with session
+{%endblock%}
+{%block body%}
+<ol>
+    {%for user in users%}
+        <li>{{user}}</li>
+    {%endfor%}
+</ol>
+<form action="{{url_for("index")}}" method="post">
+    name:<input type="text" name="uname" placeholder="Enter names of buyers:">
+    <button>add</button>
+</form>
+{%endblock%}
